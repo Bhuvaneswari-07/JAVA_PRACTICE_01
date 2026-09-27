@@ -1,5 +1,5 @@
 class Stack {
-    int stack[] = new int[10];
+    int st[] = new int[10];
     int tos;
 
 
@@ -12,7 +12,7 @@ class Stack {
         if (tos == 9) {
             System.out.println("Stack is full");
         } else {
-            stack[++tos] = item;
+            st[++tos] = item;
         }
     }
 
@@ -20,9 +20,10 @@ class Stack {
     int pop() {
         if (tos < 0) {
             System.out.println("Stack underflow");
+
             return 0;
         } else {
-            return stack[tos--];
+            return st[tos--];
         }
     }
 }
